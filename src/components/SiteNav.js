@@ -91,13 +91,15 @@ function SiteNav() {
           <Offcanvas.Body>
             <Cart />
 
-            <Button onClick={() => navigate("/shop")} size="sm" className="m-4">
+            <Button onClick={() => {navigate("/shop");
+            handleCloseCart()}} size="sm" className="m-4">
               Shop
             </Button>
             <Button
               className="m-4"
               onClick={() => {
                 navigate("/checkout");
+                handleCloseCart()
               }}
               size="sm"
             >
