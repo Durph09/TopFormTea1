@@ -34,22 +34,24 @@ function SiteNav() {
   useEffect(() => {
     const handleScroll = () => {
       const hero = document.getElementById("hero");
+      if (hero) {
       const heroPosition = hero.offsetTop + hero.offsetHeight;
       const scrollPosition = window.pageYOffset;
+      
 
       if (scrollPosition > heroPosition) {
         setNavBarBackground(navbarbgTrans);
       } else {
         setNavBarBackground(navbarbgStart);
       }
-    };
+    }else {setNavBarBackground(navbarbgStart)};
 
     window.addEventListener("scroll", handleScroll);
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  }}, []);
 
   return (
     <Navbar
