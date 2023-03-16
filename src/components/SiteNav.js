@@ -35,23 +35,25 @@ function SiteNav() {
     const handleScroll = () => {
       const hero = document.getElementById("hero");
       if (hero) {
-      const heroPosition = hero.offsetTop + hero.offsetHeight;
-      const scrollPosition = window.pageYOffset;
-      
+        const heroPosition = hero.offsetTop + hero.offsetHeight;
+        const scrollPosition = window.pageYOffset;
 
-      if (scrollPosition > heroPosition) {
-        setNavBarBackground(navbarbgTrans);
+        if (scrollPosition > heroPosition) {
+          setNavBarBackground(navbarbgTrans);
+        } else {
+          setNavBarBackground(navbarbgStart);
+        }
       } else {
         setNavBarBackground(navbarbgStart);
       }
-    }else {setNavBarBackground(navbarbgStart)};
 
-    window.addEventListener("scroll", handleScroll);
+      window.addEventListener("scroll", handleScroll);
 
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
+      return () => {
+        window.removeEventListener("scroll", handleScroll);
+      };
     };
-  }}, []);
+  }, []);
 
   return (
     <Navbar
@@ -93,15 +95,21 @@ function SiteNav() {
           <Offcanvas.Body>
             <Cart />
 
-            <Button onClick={() => {navigate("/shop");
-            handleCloseCart()}} size="sm" className="m-4">
+            <Button
+              onClick={() => {
+                navigate("/shop");
+                handleCloseCart();
+              }}
+              size="sm"
+              className="m-4"
+            >
               Shop
             </Button>
             <Button
               className="m-4"
               onClick={() => {
                 navigate("/checkout");
-                handleCloseCart()
+                handleCloseCart();
               }}
               size="sm"
             >
@@ -114,7 +122,8 @@ function SiteNav() {
           id={`offcanvasNavbar-expand-${expand}`}
           aria-labelledby={`offcanvasNavbarLabel-expand-${expand}`}
           placement="end"
-          show={show} onHide={handleClose}
+          show={show}
+          onHide={handleClose}
         >
           <Offcanvas.Header closeButton onClick={handleClose}>
             <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${expand}`}>
