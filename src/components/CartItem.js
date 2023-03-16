@@ -12,7 +12,7 @@ export const CartItem = (props) => {
   const { style } = props;
 
   return (
-    <Card style={style}>
+    <Card style={style} border="light">
       <Card.Img variant="top" src={productImage} className="w-100 h-100" />
       <Card.Body>
         <Card.Title>{productName}</Card.Title>

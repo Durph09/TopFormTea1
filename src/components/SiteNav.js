@@ -112,7 +112,7 @@ function SiteNav() {
           id={`offcanvasNavbar-expand-${expand}`}
           aria-labelledby={`offcanvasNavbarLabel-expand-${expand}`}
           placement="end"
-          show={show}
+          show={show} onHide={handleClose}
         >
           <Offcanvas.Header closeButton onClick={handleClose}>
             <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${expand}`}>
