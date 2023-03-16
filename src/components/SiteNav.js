@@ -34,7 +34,7 @@ function SiteNav() {
   useEffect(() => {
     const handleScroll = () => {
       const hero = document.getElementById("hero");
-      if (hero) {
+      if (hero !== null) {
         const heroPosition = hero.offsetTop + hero.offsetHeight;
         const scrollPosition = window.pageYOffset;
 
@@ -46,12 +46,11 @@ function SiteNav() {
       } else {
         setNavBarBackground(navbarbgStart);
       }
+    };
+    window.addEventListener("scroll", handleScroll);
 
-      window.addEventListener("scroll", handleScroll);
-
-      return () => {
-        window.removeEventListener("scroll", handleScroll);
-      };
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
