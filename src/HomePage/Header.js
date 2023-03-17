@@ -18,6 +18,7 @@ export default function Header() {
         autoPlay
         loop
         muted
+        playsInline
       />
 
       <div className="content">
