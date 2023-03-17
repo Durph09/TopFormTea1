@@ -13,7 +13,7 @@ export const CartItem = (props) => {
 
   return (
     <Card style={style} className="border-0">
-      <Card.Img variant="top" src={productImage}  />
+      <Card.Img variant="top" src={productImage} />
       <Card.Body>
         <Card.Title>{productName}</Card.Title>
 
