@@ -19,7 +19,7 @@ const Products = () => {
     const navigate = useNavigate();
 
     return (
-      <Container fluid className="bg-black">
+      <Container fluid className="bg-black w-100">
         <Row className=" py-4 align-items-center">
           <Col md={4} sm={{ span: 12, order: -1 }} className="text-center">
             <Slide triggerOnce>

@@ -6,7 +6,7 @@ import starterKit1 from "../components/assets/starterKit1.png";
 const ProductCarousel = ({ windowWidth }) => {
   const ProdCarouselSm = () => {
     return (
-      <Carousel variant="dark">
+      <Carousel variant="dark" className="w-100">
         <Carousel.Item>
           <Row className="rowCarousel">
             <ProductCard

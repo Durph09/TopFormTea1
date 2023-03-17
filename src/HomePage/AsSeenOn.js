@@ -4,7 +4,7 @@ import Image from "react-bootstrap/Image";
 
 export default function AsSeenOn() {
   return (
-    <Container fluid className="text-center bg-white">
+    <Container fluid className="text-center bg-white w-100">
       <h4>As Seen On</h4>
       <Image fluid src={asoLogos} alt="as seen on logos" />
     </Container>

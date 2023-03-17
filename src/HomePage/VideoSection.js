@@ -6,7 +6,7 @@ import matchaPancakeStraw from "../components/assets/MatchaPancakeStraw.mp4";
 
 const VideoSection = () => {
   return (
-    <Container fluid className="text-center  bg-white">
+    <Container fluid className="text-center  bg-white w-100">
       <Row className="pt-4">
         <h4>Feed your mind body and soul</h4>
       </Row>

@@ -4,7 +4,7 @@ import ProductCarousel from "./ProductCarousel";
 
 const StarterKits = ({ windowWidth }) => {
   return (
-    <Container fluid className="bg-white">
+    <Container fluid className="bg-white w-100">
       <h2>Try a starter kit</h2>
       <p>
         {" "}

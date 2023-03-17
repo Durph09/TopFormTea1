@@ -12,7 +12,7 @@ import { Slide } from "react-awesome-reveal";
 const EmailSignUp = () => {
   return (
     <>
-      <CardGroup>
+      <CardGroup className="w-100">
         <Card style={{ margin: "0%" }}>
           <Card.Img
             src={matchaIceCream}
