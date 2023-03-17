@@ -6,6 +6,7 @@ import FAQAccordion from "../HomePage/FAQAccordion";
 import StarterKits from "../HomePage/StarterKits";
 import EmailSignUp from "../HomePage/EmailSignUp";
 import VideoSection from "../HomePage/VideoSection";
+import campFire from "../components/assets/campFire.mp4"
 
 import { useState, useEffect } from "react";
 
@@ -23,7 +24,15 @@ const Home = () => {
   }, []);
 
   return (
-    <>
+    <div>
+    <video
+        className="header-container-video"
+        src={campFire}
+        autoPlay
+        loop
+        muted
+        playsInline
+      />
       <Header />
       <AsSeenOn />
       <Certs />
@@ -33,7 +42,7 @@ const Home = () => {
       <FAQAccordion />
       <StarterKits windowWidth={windowWidth} />
       <EmailSignUp />
-    </>
+    </div>
   );
 };
 

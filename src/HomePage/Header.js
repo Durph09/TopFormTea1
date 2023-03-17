@@ -12,14 +12,14 @@ export default function Header() {
         <h4>Get a Free Froather With All Starter Kits!</h4>
       </div>
 
-      <video
+     {/*} <video
         className="header-container-video"
         src={campFire}
         autoPlay
         loop
         muted
         playsInline
-      />
+      />{*/}
 
       <div className="content">
         <h1>Live Top Form, Drink Top Form</h1>
