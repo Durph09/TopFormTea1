@@ -13,7 +13,7 @@ const FAQAccordion = () => {
   };
 
   return (
-    <Container className="mt-0 pt-0 " style={bgPicStyle}>
+    <Container fluid className="mt-0 pt-0 " style={bgPicStyle}>
       <Row>
         <Col></Col>
 
