@@ -17,7 +17,7 @@ const FAQAccordion = () => {
       <Row>
         <Col></Col>
 
-        <Col sm={12} md={6}>
+        <Col xs={12} md={6}>
           <h2 className="text-light">Ask us anything</h2>
           <Accordion className="accordionCustom">
             <Accordion.Item className="accordionCustom" eventKey="0">
