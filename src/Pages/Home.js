@@ -33,6 +33,7 @@ const Home = () => {
         muted
         playsInline
       />
+      <div style={{overflow: "hidden"}}>
       <Header />
       <AsSeenOn />
       <Certs />
@@ -42,6 +43,7 @@ const Home = () => {
       <FAQAccordion />
       <StarterKits windowWidth={windowWidth} />
       <EmailSignUp />
+      </div>
     </div>
   );
 };
