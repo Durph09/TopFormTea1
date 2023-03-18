@@ -21,7 +21,7 @@ const Products = () => {
     return (
       <Container fluid className="bg-black w-100">
         <Row className=" py-4 align-items-center">
-          <Col md={4} sm={{ span: 12, order: -1 }} className="text-center">
+          <Col md={4} xs={{ span: 12, order: -1 }} className="text-center">
             <Slide triggerOnce>
               {" "}
               <h2>{headline}</h2>
@@ -36,11 +36,11 @@ const Products = () => {
             </Slide>
           </Col>
 
-          <Col md={4} sm={12}>
+          <Col md={4} xs={12}>
             <img src={imgSrc} className="prodImage" alt={altText} />
           </Col>
 
-          <Col md={4} sm={12} className=" text-center">
+          <Col md={4} xs={12} className=" text-center">
             <Slide triggerOnce direction="right" >
               {" "}
               <h4>Taste</h4>
