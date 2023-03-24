@@ -1,9 +1,7 @@
 import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
-import Form from "react-bootstrap/Form";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-
 import Offcanvas from "react-bootstrap/Offcanvas";
 import { useState, useEffect } from "react";
 import cart from "./assets/cart.png";
@@ -131,14 +129,14 @@ function SiteNav() {
           </Offcanvas.Header>
           <Offcanvas.Body>
             <Nav className="justify-content-end flex-grow-1 pe-3">
-              <Nav.Link as={Link} to="/">
+              <Nav.Link as={Link} to="/" onClick={handleClose}>
                 Home
               </Nav.Link>
-              <Nav.Link as={Link} to="/Shop">
+              <Nav.Link as={Link} to="/Shop" onClick={handleClose}>
                 Shop All
               </Nav.Link>
 
-              <Nav.Link as={Link} to="/AboutUs">
+              <Nav.Link as={Link} to="/AboutUs" onClick={handleClose}>
                 About Us
               </Nav.Link>
             </Nav>
