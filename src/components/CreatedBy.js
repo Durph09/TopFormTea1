@@ -1,5 +1,22 @@
 import { Link } from "react-router-dom";
-import { useParallax } from "react-scroll-parallax";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+
+const socials = [
+  {
+    icon: faEnvelope,
+    url: "mailto: Crmahaneyweb@gmial.com",
+  },
+  {
+    icon: faGithub,
+    url: "https://github.com/Durph09",
+  },
+  {
+    icon: faLinkedin,
+    url: "www.linkedin.com/in/conor-mahaney-3a74b4204",
+  },
+];
 
 const Mailto = ({ mailto, label }) => {
   return (
@@ -16,14 +33,14 @@ const Mailto = ({ mailto, label }) => {
 };
 
 const CreatedBy = () => {
-
- 
   return (
-    <div 
+    <div
       style={{ justifyContent: "center", alignItems: "center" }}
-      className="text-center bg-white"
+      className="text-center bg-info"
     >
-      <h2 style={{textDecoration: 'underline'}}>Welcome to one of my portfolio sites</h2>
+      <h2 style={{ textDecoration: "underline" }}>
+        Welcome to one of my portfolio sites
+      </h2>
       <p>
         {" "}
         My name is Conor Mahaney and I am excited to share my projects. This
@@ -32,13 +49,29 @@ const CreatedBy = () => {
         look around and feel free to contact me with any questions or
         opportunities. Thank you for visiting!
       </p>
-      <p>Conor Mahaney </p>
-      <Mailto
-        label="CrmahaneyWeb@gmail.com"
-        mailto="mailto:crmahaneyWeb@gmail.com"
-      />
-
-
+      <h4>Conor Mahaney </h4>
+      <div>
+        <a
+          href="https://conormahaney.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          ConorMahaney.com
+        </a>
+      </div>
+      <div>
+        {socials.map(({ icon, url }) => (
+          <span
+            className=""
+            key={url}
+            href={url}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FontAwesomeIcon icon={icon} size="3x" key={url} className="m-2" />
+          </span>
+        ))}
+      </div>
     </div>
   );
 };
