@@ -36,7 +36,7 @@ function App() {
               <Route path="/Checkout" element={<Checkout />} />
             </Routes>
             <Footer />
-            <CreatedBy />
+           
           
         </ShopContextProvider>
       
